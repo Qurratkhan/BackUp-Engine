@@ -76,6 +76,7 @@
     <Reference Include="System.Data.SQLite.Linq, Version=1.0.116.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.116.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
     </Reference>
@@ -103,6 +104,13 @@
     <Compile Include="AddProject.Designer.cs">
       <DependentUpon>AddProject.cs</DependentUpon>
     </Compile>
+    <Compile Include="BackUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackUp.Designer.cs">
+      <DependentUpon>BackUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Connection.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +122,9 @@
     <Compile Include="ValueEventHandle.cs" />
     <EmbeddedResource Include="AddProject.resx">
       <DependentUpon>AddProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackUp.resx">
+      <DependentUpon>BackUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -140,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
